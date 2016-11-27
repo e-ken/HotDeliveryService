@@ -1,0 +1,23 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HotDeliveryService", "HotDeliveryService\HotDeliveryService.csproj", "{0A34BEBB-6B03-48FF-8DAD-93D65EFC1027}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HotDeliveryService.Tests", "HotDeliveryService.Tests\HotDeliveryService.Tests.csproj", "{1DD4EBE9-9DDE-4A5F-B896-A1BF86688D40}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0A34BEBB-6B03-48FF-8DAD-93D65EFC1027}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0A34BEBB-6B03-48FF-8DAD-93D65EFC1027}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0A34BEBB-6B03-48FF-8DAD-93D65EFC1027}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0A34BEBB-6B03-48FF-8DAD-93D65EFC1027}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1DD4EBE9-9DDE-4A5F-B896-A1BF86688D40}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1DD4EBE9-9DDE-4A5F-B896-A1BF86688D40}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1DD4EBE9-9DDE-4A5F-B896-A1BF86688D40}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1DD4EBE9-9DDE-4A5F-B896-A1BF86688D40}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
