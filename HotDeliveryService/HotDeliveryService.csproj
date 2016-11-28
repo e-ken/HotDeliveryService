@@ -90,6 +90,7 @@
     <Compile Include="Data\IStorage.cs" />
     <Compile Include="Data\XmlStorage.cs" />
     <Compile Include="Data\Storage.cs" />
+    <Compile Include="Controllers\AllExceptionFilter.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Models\" />

@@ -1,5 +1,6 @@
 ﻿using System;
-//using System.Net.Http;
+using System.Net;
+using System.Net.Http;
 using System.Linq;
 using System.Collections.Generic;
 using System.Web.Http;
@@ -19,16 +20,21 @@ namespace HotDeliveryService {
             return storage.GetAvailableDeliveries ();
         }
 
-        public void TakeDelivery (int userId, int deliveryId) {
-            var delivery =  storage.GetDeliveryByDeliveryId (deliveryId); 
+        public HttpResponseMessage TakeDelivery (int userId, int deliveryId) {
+            var delivery =  storage.GetDeliveryByDeliveryId (deliveryId);
 
-            if (delivery == null) return;
-            if (delivery.Status != DeliveryStatus.Available) return;
+            if (delivery == null)
+                return Request.CreateResponse (HttpStatusCode.NotFound, $"доставка id {deliveryId} не найдена");
+            if (delivery.Status != DeliveryStatus.Available) 
+                return Request.CreateResponse ((HttpStatusCode)422, $"доставка id {deliveryId} статус отличается от Available");
+
 
             delivery.UserId = userId;
             delivery.Status = DeliveryStatus.Taken;
 
             storage?.Update (delivery);
+
+            return Request.CreateResponse (HttpStatusCode.OK);
         }
     }
 }
